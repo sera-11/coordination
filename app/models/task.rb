@@ -12,4 +12,8 @@
 #  organization_id :integer
 #
 class Task < ApplicationRecord
+
+  ## Direct Associations
+  belongs_to :member, foreign_key: "assigned_to_id"
+  belongs_to :organization
 end

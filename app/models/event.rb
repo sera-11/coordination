@@ -18,4 +18,6 @@
 #  organization_id :integer
 #
 class Event < ApplicationRecord
+  ## Direct Associations
+  belongs_to :organization
 end

@@ -10,4 +10,7 @@
 #
 class MeetingMinute < ApplicationRecord
   has_rich_text :content
+
+  ## Direct Associations
+  belongs_to :organization
 end

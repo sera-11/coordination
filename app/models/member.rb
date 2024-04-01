@@ -15,4 +15,8 @@
 #  user_id         :integer
 #
 class Member < ApplicationRecord
+  ## Direct Associations
+  has_many :tasks, foreign_key: "assigned_to_id", dependent: :destroy
+  belongs_to :user, optional: true
+  belongs_to :organization
 end

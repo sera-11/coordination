@@ -25,4 +25,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  ## Direct Associations
+  has_many :memberships, class_name: "Member", dependent: :nullify
 end
