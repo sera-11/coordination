@@ -4,9 +4,9 @@
 
 <div id="meeting_minutes">
   <% @meeting_minutes.each do |meeting_minute| %>
-    <%= render meeting_minute %>
+    <%#= render meeting_minute %>
     <p>
-      <%= link_to "Show this meeting minute", meeting_minute %>
+      <%= link_to meeting_minute.meeting_date, meeting_minute %>
     </p>
   <% end %>
 </div>
