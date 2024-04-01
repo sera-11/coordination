@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :members
+  resources :tasks
   resources :organizations
   resources :meeting_minutes
   devise_for :users

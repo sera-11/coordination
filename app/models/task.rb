@@ -1,13 +1,15 @@
 # == Schema Information
 #
-# Table name: meeting_minutes
+# Table name: tasks
 #
 #  id              :integer          not null, primary key
-#  meeting_date    :date
+#  due_date        :date
+#  status          :string
+#  text            :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  assigned_to_id  :integer
 #  organization_id :integer
 #
-class MeetingMinute < ApplicationRecord
-  has_rich_text :content
+class Task < ApplicationRecord
 end
