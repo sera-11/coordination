@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :organizations do
     get "meeting_minutes", on: :member
     get "members", on: :member
+    get "tasks", on: :member
   end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
