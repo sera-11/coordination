@@ -4,11 +4,10 @@
 
   <%= render @organization %>
 
-  <div>
-    <%= link_to "Edit this organization", edit_organization_path(@organization) %> |
-    <%= link_to "Back to organizations", organizations_path %>
-
-    <%= button_to "Destroy this organization", @organization, method: :delete %>
-  </div>
+  <footer class="text-center">
+    <%= link_to "Back to organizations", organizations_path %> | 
+    <%= link_to "Edit #{@organization.name}", edit_organization_path(@organization) %> |
+    <%= link_to "Delete #{@organization.name}", @organization, method: :delete %>
+  </footer>
 
 </div>

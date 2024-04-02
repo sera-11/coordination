@@ -10,7 +10,7 @@
           <a class="nav-link" href="/organizations/<%=organization.id%>"> <%= organization.name %> </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/meeting_minutes">Meeting Minutes</a>
+          <%= link_to 'Meeting Minutes', meeting_minutes_organization_path(@organization), class: 'nav-link' %>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/members">Members</a>
