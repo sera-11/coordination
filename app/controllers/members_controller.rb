@@ -8,10 +8,13 @@ class MembersController < ApplicationController
 
   # GET /members/1 or /members/1.json
   def show
+    @member = Member.find(params[:id])
+    @organization = @member.organization
   end
 
   # GET /members/new
   def new
+    @organization = Organization.find(params[:organization_id])
     @member = Member.new
   end
 

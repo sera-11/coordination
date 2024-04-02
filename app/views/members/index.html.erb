@@ -1,14 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Members</h1>
+<div class="container">
 
-<div id="members">
-  <% @members.each do |member| %>
-    <%= render member %>
-    <p>
-      <%= link_to "Show this member", member %>
-    </p>
-  <% end %>
+  <h1>Members</h1>
+
+  <div id="members">
+    <% @members.each do |member| %>
+
+      <p>
+        <%= link_to "#{member.first_name} #{member.last_name}", member %>
+      </p>
+
+    <% end %>
+  </div>
+
+  <%= link_to "New member", new_member_path(organization_id: @organization.id) %>
+
 </div>
-
-<%= link_to "New member", new_member_path %>
