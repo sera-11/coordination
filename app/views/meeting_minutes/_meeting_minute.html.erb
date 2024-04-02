@@ -1,17 +1,12 @@
 <div id="<%= dom_id meeting_minute %>">
-  <p>
-    <strong>Content:</strong>
-    <%= meeting_minute.content %>
-  </p>
 
-  <p>
-    <strong>Meeting date:</strong>
+  <h2 class="text-center">
+
     <%= meeting_minute.meeting_date.strftime("%Y %B %d") %>
-  </p>
+  </h2>
 
   <p>
-    <strong>Organization:</strong>
-    <%= meeting_minute.organization_id %>
+    <%= meeting_minute.content %>
   </p>
 
 </div>

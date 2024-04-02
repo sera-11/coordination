@@ -1,10 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @meeting_minute %>
+<div class="container">
+  <%= render @meeting_minute %>
 
-<div>
-  <%= link_to "Edit this meeting minute", edit_meeting_minute_path(@meeting_minute) %> |
-  <%= link_to "Back to Organization's Meeting Minutes", meeting_minutes_organization_path(@organization) %>
+  <div>
+    <%= link_to "Edit this meeting minute", edit_meeting_minute_path(@meeting_minute) %> |
+    <%= link_to "Back to Meeting Minutes", meeting_minutes_organization_path(@organization) %>
 
-  <%= button_to "Destroy this meeting minute", @meeting_minute, method: :delete %>
+    <%= button_to "Destroy this meeting minute", @meeting_minute, method: :delete %>
+  </div>
 </div>
