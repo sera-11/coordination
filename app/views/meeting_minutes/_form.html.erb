@@ -22,8 +22,8 @@
   </div>
 
   <div>
-    <%= form.label :organization_id, style: "display: block" %>
-    <%= form.number_field :organization_id %>
+    <%= form.label :organization_id, "Organization", style: "display: block" %>
+    <%= form.hidden_field :organization_id, value: @organization.id %>
   </div>
 
   <div>

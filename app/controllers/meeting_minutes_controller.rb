@@ -12,8 +12,10 @@ class MeetingMinutesController < ApplicationController
 
   # GET /meeting_minutes/new
   def new
+    @organization = Organization.find(params[:organization_id])
     @meeting_minute = MeetingMinute.new
-  end
+  end  
+  
 
   # GET /meeting_minutes/1/edit
   def edit

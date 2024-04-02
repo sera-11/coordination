@@ -1,16 +1,20 @@
 <!-- app/views/meeting_minutes/index.html.erb -->
 
 <p style="color: green"><%= notice %></p>
+<div class="container">
 
-<h1>Meeting minutes</h1>
+  <h1 class="text-center">Meeting Minutes</h1>
 
-<div id="meeting_minutes">
-  <% @meeting_minutes.each do |meeting_minute| %>
-    <%#= render meeting_minute %>
-    <p>
-      <%= link_to meeting_minute.meeting_date, meeting_minute %>
-    </p>
-  <% end %>
+  <div id="meeting_minutes">
+    <% @meeting_minutes.each do |meeting_minute| %>
+      <%#= render meeting_minute %>
+      <p>
+        <%= link_to meeting_minute.meeting_date.strftime("%Y %B %d"), meeting_minute %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New Meeting Minute", new_meeting_minute_path(organization_id: @organization.id) %>
+
+
 </div>
-
-<%= link_to "New meeting minute", new_meeting_minute_path %>
