@@ -20,6 +20,9 @@ class MembersController < ApplicationController
 
   # GET /members/1/edit
   def edit
+    @member = Member.find(params[:id]) # Fetch the member record by ID
+
+    @organization = @member.organization
   end
 
   # POST /members or /members.json

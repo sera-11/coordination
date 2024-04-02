@@ -4,6 +4,7 @@ class MeetingMinutesController < ApplicationController
   # GET /meeting_minutes or /meeting_minutes.json
   def index
     @meeting_minutes = MeetingMinute.all
+    @organization = @meeting_minute.organization
   end
 
   # GET /meeting_minutes/1 or /meeting_minutes/1.json
