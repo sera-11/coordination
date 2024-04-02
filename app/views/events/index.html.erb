@@ -1,21 +1,25 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
 
-<h1>Events</h1>
+  <p style="color: green"><%= notice %></p>
 
-<div id="events">
-  <% @events.each do |event| %>
-    <p>
-      <%= link_to event.title, event %>
-    </p>
-  <% end %>
-</div>
+  <h1>Events</h1>
 
-<%= link_to "New event", new_event_path %>
-
-<hr>
-
-<%= month_calendar do |date| %>
-  <div class="day">
-    <%= date.day %>
+  <div id="events">
+    <% @events.each do |event| %>
+      <p>
+        <%= link_to event.title, event %>
+      </p>
+    <% end %>
   </div>
-<% end %>
+
+  <%= link_to "New event", new_event_path %>
+
+  <hr>
+  <%= month_calendar events: @ do |date, events| %>
+    <%= date.day %>
+    <% events.each do |event| %>
+      <%= event.title %> <!-- Example: Display event title -->
+    <% end %>
+  <% end %>
+
+</div>
