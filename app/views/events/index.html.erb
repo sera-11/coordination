@@ -15,7 +15,7 @@
   <%= link_to "New event", new_event_path %>
 
   <hr>
-  <%= month_calendar events: @ do |date, events| %>
+  <%= month_calendar events: @events do |date, events| %>
     <%= date.day %>
     <% events.each do |event| %>
       <%= event.title %> <!-- Example: Display event title -->
