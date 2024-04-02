@@ -75,6 +75,13 @@ class OrganizationsController < ApplicationController
     render 'tasks/index'
   end
 
+  def events
+    @organization = Organization.find(params[:id])
+    @events = @organization.events 
+    render 'events/index'
+  end
+
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
