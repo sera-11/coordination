@@ -3,10 +3,27 @@
     <%= organization.name %>
   </h1>
 
-  <a href="/meeting_minutes">Meeting Minutes</a> // 
-  <a href="/members">Members</a> //
-  <a href="/tasks">Tasks</a> //
-  <a href="/events">Events</a>
+  <nav class="bg-body-tertiary">
+    <div class="container-fluid">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="/organizations/<%=organization.id%>"> <%= organization.name %> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/meeting_minutes">Meeting Minutes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/members">Members</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/tasks">Tasks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/events">Events</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 </div>
 
