@@ -4,7 +4,7 @@ class MeetingMinutesController < ApplicationController
   # GET /meeting_minutes or /meeting_minutes.json
   def index
     @meeting_minutes = MeetingMinute.all
-    @organization = @meeting_minute.organization
+    @organization = @meeting_minutes.organization
   end
 
   # GET /meeting_minutes/1 or /meeting_minutes/1.json
@@ -23,6 +23,8 @@ class MeetingMinutesController < ApplicationController
 
   # GET /meeting_minutes/1/edit
   def edit
+    @meeting_minute = MeetingMinute.find(params[:id])
+    @organization = @meeting_minute.organization
   end
 
   # POST /meeting_minutes or /meeting_minutes.json

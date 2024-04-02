@@ -10,7 +10,7 @@
   <div id="meeting_minutes">
     <% @meeting_minutes.each do |meeting_minute| %>
       <p>
-        <%= link_to meeting_minute.meeting_date.strftime("%Y %B %d"), meeting_minute %>
+        <%= link_to meeting_minute.meeting_date.try(:strftime, '%Y %B %d'), meeting_minute %>
       </p>
     <% end %>
   </div>
@@ -19,3 +19,5 @@
 
 
 </div>
+
+

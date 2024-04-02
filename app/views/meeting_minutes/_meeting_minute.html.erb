@@ -2,7 +2,7 @@
 
   <h2 class="text-center">
 
-    <%= meeting_minute.meeting_date.strftime("%Y %B %d") %>
+    <%= meeting_minute.meeting_date.try(:strftime, '%Y %B %d') %>
   </h2>
 
   <p>
