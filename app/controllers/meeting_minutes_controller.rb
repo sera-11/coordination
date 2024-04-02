@@ -8,7 +8,10 @@ class MeetingMinutesController < ApplicationController
 
   # GET /meeting_minutes/1 or /meeting_minutes/1.json
   def show
+    @meeting_minute = MeetingMinute.find(params[:id])
+    @organization = @meeting_minute.organization
   end
+  
 
   # GET /meeting_minutes/new
   def new
