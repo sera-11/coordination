@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>CoordiNation</title>
-     <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <link rel="icon" type="image/x-icon" href="/images/icon.png">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +10,6 @@
     <%= render partial: "shared/cdn_assets" %>
 
     <link rel="stylesheet" href="styles.css">
-
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
@@ -21,5 +20,12 @@
     <%= render partial: "shared/nav" %>
 
     <%= yield %>
+
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+      <div class="container px-4">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
+      </div>
+    </footer>
   </body>
 </html>
