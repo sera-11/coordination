@@ -85,6 +85,4 @@ test:
 #
 production:
   <<: *default
-  database: coordination
-  username: coordination_user
-  password: RTS6FpHW2oSNvvqv9CAP8EIudgrYfUyr
+  url: <%= ENV['DATABASE_URL'] %>

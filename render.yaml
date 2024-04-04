@@ -2,7 +2,7 @@ databases:
   - name: coordination
     plan: free
     databaseName: coordination
-    user: coordination
+    user: coordination_user
 
 services:
   - type: web
