@@ -85,6 +85,6 @@ test:
 #
 production:
   <<: *default
-  database: rails_template_production
-  username: rails_template
-  password: <%= ENV["RAILS_TEMPLATE_DATABASE_PASSWORD"] %>
+  database: coordination
+  username: coordination_user
+  password: RTS6FpHW2oSNvvqv9CAP8EIudgrYfUyr
