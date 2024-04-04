@@ -1,3 +1,10 @@
-desc "Fill the database tables with some sample data"
-task({ :sample_data => :environment }) do
+namespace :dev do
+  desc "Destroy, create, migrate, and seed database"
+  task reset: :environment do
+  end
+
+  desc "TODO"
+  task sample_data: :environment do
+  end
+
 end
